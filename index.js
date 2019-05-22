@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use('/login', (req, res, next) => {
+app.use('/api/users/login', (req, res, next) => {
   res.cookie('auth', '123', {
     expires: new Date(Date.now() + 10000000)
   }).end()
