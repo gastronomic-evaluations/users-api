@@ -1,5 +1,6 @@
 const healthcheck = require('../controllers/healthcheck');
 
-module.exports = (app) => {
-  app.use('/users/api/healthcheck', healthcheck);
+module.exports = (router) => {
+  router
+    .get('/healthcheck', healthcheck);
 };
