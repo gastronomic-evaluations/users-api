@@ -1,0 +1,16 @@
+# Javascript Node CircleCI 2.0 configuration file
+
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:8.9.0
+        environment:
+          MONGODB_URI: mongodb://localhost:27017/users_test
+          NODE_ENV: test
+      - image: circleci/mongo
+
+    steps:
+      - checkout
+      - run: npm install
+      - run: npm run test:ci
