@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon index.js"
+    "server": "nodemon index.js",
+    "test": "NODE_ENV=test jest --watch",
+    "coverage": "NODE_ENV=test jest --coverage"
   },
   "keywords": [],
   "author": "",
@@ -15,7 +17,14 @@
     "express": "^4.16.4",
     "helmet": "^3.18.0",
     "http": "0.0.0",
+    "jest": "^24.8.0",
     "morgan": "^1.9.1",
     "nodemon": "^1.19.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "supertest": "^4.0.2"
   }
 }
