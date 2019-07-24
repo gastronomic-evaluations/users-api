@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
 
 module.exports = () => {
-  mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });
+  mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
 };
